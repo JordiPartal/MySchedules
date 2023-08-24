@@ -15,7 +15,7 @@
         Dim exist As Boolean
 
         Try
-            exist = ComprobarUsuarioSQL(txt_usuario.Text)
+            exist = ComprobarUsuarioSQL(txt_usuario.Text, txt_contrasena.Text)
             InformarSiExisteSQL(exist, btn_login)
         Catch ex As Exception
 

@@ -4,13 +4,17 @@ Module LoginValidation
     Dim ColeccionDeDatos As New DataSet
     Dim Adapter As SqlDataAdapter
 
-    Function ComprobarUsuarioSQL(usuario As String) As Boolean
+    Function ComprobarUsuarioSQL(usuario As String, password As String) As Boolean
         Dim existe As Boolean
+        Dim usuario_ok As Boolean
+        Dim password_ok As Boolean
 
         Abrir()
         Adapter = New SqlDataAdapter("ComprobarDatos", CONEXION)
         Adapter.Fill(ColeccionDeDatos)
-        existe = ColeccionDeDatos.Tables(0).Rows(0)("usuario").ToString() = usuario
+        usuario_ok = ColeccionDeDatos.Tables(0).Rows(0)("usuario").ToString() = usuario
+        password_ok = ColeccionDeDatos.Tables(0).Rows(0)("password").ToString() = password
+        existe = usuario_ok And password_ok
         Cerrar()
 
         Return existe
