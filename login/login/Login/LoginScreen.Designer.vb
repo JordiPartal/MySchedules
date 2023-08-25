@@ -136,17 +136,19 @@ Partial Class LoginScreen
         ' btn_login
         ' 
         btn_login.BackColor = Color.Black
+        btn_login.Cursor = Cursors.Hand
+        btn_login.Dock = DockStyle.Fill
         btn_login.FlatStyle = FlatStyle.Flat
         btn_login.Font = New Font("Eras Demi ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
         btn_login.ForeColor = Color.Transparent
         btn_login.Location = New Point(3, 291)
         btn_login.Name = "btn_login"
-        btn_login.Size = New Size(714, 59)
+        btn_login.Size = New Size(714, 66)
         btn_login.TabIndex = 3
         btn_login.Text = "Login"
         btn_login.UseVisualStyleBackColor = False
         ' 
-        ' FrmLogin
+        ' LoginScreen
         ' 
         AutoScaleDimensions = New SizeF(14F, 31F)
         AutoScaleMode = AutoScaleMode.Font
@@ -156,7 +158,7 @@ Partial Class LoginScreen
         Font = New Font("Eras Light ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(5)
-        Name = "FrmLogin"
+        Name = "LoginScreen"
         StartPosition = FormStartPosition.CenterScreen
         Text = "login"
         tlp_principal.ResumeLayout(False)
