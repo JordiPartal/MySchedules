@@ -10,9 +10,9 @@ Module LoginValidation
         Dim password_ok As Boolean
 
         Abrir()
-        Adapter = New SqlDataAdapter("ComprobarDatos", CONEXION)
+        Adapter = New SqlDataAdapter("MostrarUsuarios", CONEXION)
         Adapter.Fill(ColeccionDeDatos)
-        usuario_ok = ColeccionDeDatos.Tables(0).Rows(0)("usuario").ToString() = usuario
+        usuario_ok = ColeccionDeDatos.Tables(0).Rows(0)("login").ToString() = usuario
         password_ok = ColeccionDeDatos.Tables(0).Rows(0)("password").ToString() = password
         existe = usuario_ok And password_ok
         Cerrar()

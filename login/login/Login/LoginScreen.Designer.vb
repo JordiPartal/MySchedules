@@ -160,7 +160,7 @@ Partial Class LoginScreen
         Margin = New Padding(5)
         Name = "LoginScreen"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "login"
+        Text = "Login"
         tlp_principal.ResumeLayout(False)
         tlp_principal.PerformLayout()
         Panel1.ResumeLayout(False)

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Module ConexionSQL
-    Public CONEXION As New SqlConnection("Data Source=ITSMEMARIO\SQLEXPRESS; Initial Catalog=MyScheduleApp; Integrated Security=True")
+    Public CONEXION As New SqlConnection("Data Source=ITSMEMARIO\SQLEXPRESS; Initial Catalog=MySchedule; Integrated Security=True")
 
     Sub Abrir()
         If CONEXION.State = 0 Then
