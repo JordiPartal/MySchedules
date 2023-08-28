@@ -120,7 +120,7 @@ Partial Class ScheduleControlHorario
         cmb_cursos.FlatStyle = FlatStyle.Popup
         cmb_cursos.Font = New Font("Eras Medium ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
         cmb_cursos.FormattingEnabled = True
-        cmb_cursos.Location = New Point(413, 30)
+        cmb_cursos.Location = New Point(413, 29)
         cmb_cursos.Name = "cmb_cursos"
         cmb_cursos.Size = New Size(404, 39)
         cmb_cursos.TabIndex = 2
