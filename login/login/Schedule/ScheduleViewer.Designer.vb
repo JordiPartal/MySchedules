@@ -23,46 +23,38 @@ Partial Class ScheduleViewer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(ScheduleViewer))
-        tbl_shedule = New TableLayoutPanel()
-        sch_control = New ScheduleControl()
+        tbl_principal = New TableLayoutPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
         TableLayoutPanel3 = New TableLayoutPanel()
         pic_cursos = New PictureBox()
         pic_calendario = New PictureBox()
         lbl_saludo = New Label()
         TableLayoutPanel2 = New TableLayoutPanel()
-        tbl_shedule.SuspendLayout()
+        tbl_custom_control = New TableLayoutPanel()
+        sch_curso = New ScheduleControlCurso()
+        tbl_principal.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
         CType(pic_cursos, ComponentModel.ISupportInitialize).BeginInit()
         CType(pic_calendario, ComponentModel.ISupportInitialize).BeginInit()
+        tbl_custom_control.SuspendLayout()
         SuspendLayout()
         ' 
-        ' tbl_shedule
+        ' tbl_principal
         ' 
-        tbl_shedule.ColumnCount = 2
-        tbl_shedule.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 16F))
-        tbl_shedule.ColumnStyles.Add(New ColumnStyle())
-        tbl_shedule.Controls.Add(sch_control, 0, 1)
-        tbl_shedule.Controls.Add(TableLayoutPanel1, 1, 0)
-        tbl_shedule.Dock = DockStyle.Fill
-        tbl_shedule.Location = New Point(0, 0)
-        tbl_shedule.Name = "tbl_shedule"
-        tbl_shedule.RowCount = 2
-        tbl_shedule.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
-        tbl_shedule.RowStyles.Add(New RowStyle(SizeType.Percent, 75F))
-        tbl_shedule.Size = New Size(820, 480)
-        tbl_shedule.TabIndex = 0
-        ' 
-        ' sch_control
-        ' 
-        sch_control.cabecera = Nothing
-        tbl_shedule.SetColumnSpan(sch_control, 2)
-        sch_control.Dock = DockStyle.Fill
-        sch_control.Location = New Point(3, 123)
-        sch_control.Name = "sch_control"
-        sch_control.Size = New Size(814, 354)
-        sch_control.TabIndex = 0
+        tbl_principal.ColumnCount = 2
+        tbl_principal.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 16F))
+        tbl_principal.ColumnStyles.Add(New ColumnStyle())
+        tbl_principal.Controls.Add(TableLayoutPanel1, 1, 0)
+        tbl_principal.Controls.Add(tbl_custom_control, 0, 1)
+        tbl_principal.Dock = DockStyle.Fill
+        tbl_principal.Location = New Point(0, 0)
+        tbl_principal.Name = "tbl_principal"
+        tbl_principal.RowCount = 2
+        tbl_principal.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        tbl_principal.RowStyles.Add(New RowStyle(SizeType.Percent, 75F))
+        tbl_principal.Size = New Size(820, 480)
+        tbl_principal.TabIndex = 0
         ' 
         ' TableLayoutPanel1
         ' 
@@ -147,31 +139,58 @@ Partial Class ScheduleViewer
         TableLayoutPanel2.Size = New Size(200, 100)
         TableLayoutPanel2.TabIndex = 0
         ' 
+        ' tbl_custom_control
+        ' 
+        tbl_custom_control.ColumnCount = 1
+        tbl_principal.SetColumnSpan(tbl_custom_control, 2)
+        tbl_custom_control.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        tbl_custom_control.Controls.Add(sch_curso, 0, 0)
+        tbl_custom_control.Dock = DockStyle.Fill
+        tbl_custom_control.Location = New Point(3, 123)
+        tbl_custom_control.Name = "tbl_custom_control"
+        tbl_custom_control.RowCount = 1
+        tbl_custom_control.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        tbl_custom_control.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        tbl_custom_control.Size = New Size(814, 354)
+        tbl_custom_control.TabIndex = 2
+        ' 
+        ' sch_curso
+        ' 
+        sch_curso.BackColor = Color.White
+        sch_curso.cabecera = Nothing
+        sch_curso.Location = New Point(3, 3)
+        sch_curso.Name = "sch_curso"
+        sch_curso.Size = New Size(808, 348)
+        sch_curso.TabIndex = 0
+        ' 
         ' ScheduleViewer
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         ClientSize = New Size(820, 480)
-        Controls.Add(tbl_shedule)
+        Controls.Add(tbl_principal)
         FormBorderStyle = FormBorderStyle.None
         Name = "ScheduleViewer"
-        StartPosition = FormStartPosition.CenterParent
+        StartPosition = FormStartPosition.CenterScreen
         Text = "ScheduleViewer"
-        tbl_shedule.ResumeLayout(False)
+        tbl_principal.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
         TableLayoutPanel3.ResumeLayout(False)
         CType(pic_cursos, ComponentModel.ISupportInitialize).EndInit()
         CType(pic_calendario, ComponentModel.ISupportInitialize).EndInit()
+        tbl_custom_control.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents tbl_shedule As TableLayoutPanel
-    Friend WithEvents sch_control As ScheduleControl
+    Friend WithEvents tbl_principal As TableLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents lbl_saludo As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents pic_cursos As PictureBox
     Friend WithEvents pic_calendario As PictureBox
+    Friend WithEvents tbl_custom_control As TableLayoutPanel
+    Friend WithEvents sch_curso As ScheduleControlCurso
 End Class

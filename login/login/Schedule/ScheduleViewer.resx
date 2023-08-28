@@ -121,7 +121,7 @@
   <data name="pic_cursos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADciSURBVHhe7d0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADciSURBVHhe7d0J
         mBTVvf7xAhHUuGvEJe6JRo0ryiKgCCrLdDeLgLjggoRNUQEFF3q6AUVUZFNRFJG4gLIoOyoxUa+a7eq9
         iRrjHo0r6s3NdnP/1+X8z+mpCTM9P6Cru7r7nKrv+zyfR2SGnpnqqfq90z3ntEcIIYQQQgghhBBCCCGE
         EEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhJBYp1nSyx6Q8Gq7pbzaAUkvPVT/94qkVzsBAIDoS1+u/3uJ
@@ -363,7 +363,7 @@
   <data name="pic_calendario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGYYSURBVHhe7d0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGYYSURBVHhe7d0J
         uGRVee//6m7obuhmnkGglaFlkHnuZkZEJkFUEJpuemCeFQSDomicghoSBBkcSNSIKIpTZNCAOCVxVgZl
         1DiCUXKT3Hv/yU2y/2udk4rH5tun1++sqnVW1f69z/N5brz0fs/7vnufvepU1d6743A4HA6Hw+FwOBwO
         h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8NRcbwg+LPggeBfg2aSxRpi

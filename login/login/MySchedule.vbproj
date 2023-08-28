@@ -6,6 +6,7 @@
     <StartupObject>MySchedule.ScheduleViewer</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <UseWPF>False</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
