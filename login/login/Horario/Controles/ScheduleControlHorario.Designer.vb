@@ -24,14 +24,11 @@ Partial Class ScheduleControlHorario
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         TableLayoutPanel1 = New TableLayoutPanel()
-        dtg_dias = New DataGridView()
         dtg_horario = New DataGridView()
         lbl_informacion = New Label()
         cmb_cursos = New ComboBox()
         TableLayoutPanel1.SuspendLayout()
-        CType(dtg_dias, ComponentModel.ISupportInitialize).BeginInit()
         CType(dtg_horario, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -41,7 +38,6 @@ Partial Class ScheduleControlHorario
         TableLayoutPanel1.ColumnCount = 2
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Controls.Add(dtg_dias, 1, 1)
         TableLayoutPanel1.Controls.Add(dtg_horario, 0, 1)
         TableLayoutPanel1.Controls.Add(lbl_informacion, 0, 0)
         TableLayoutPanel1.Controls.Add(cmb_cursos, 1, 0)
@@ -54,7 +50,7 @@ Partial Class ScheduleControlHorario
         TableLayoutPanel1.Size = New Size(820, 360)
         TableLayoutPanel1.TabIndex = 0
         ' 
-        ' dtg_dias
+        ' dtg_horario
         ' 
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Control
@@ -63,36 +59,16 @@ Partial Class ScheduleControlHorario
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dtg_dias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        dtg_dias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dtg_horario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        dtg_horario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Eras Medium ITC", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.Font = New Font("Eras Medium ITC", 12F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dtg_dias.DefaultCellStyle = DataGridViewCellStyle2
-        dtg_dias.Dock = DockStyle.Fill
-        dtg_dias.Location = New Point(413, 75)
-        dtg_dias.Name = "dtg_dias"
-        dtg_dias.RowHeadersWidth = 51
-        dtg_dias.RowTemplate.Height = 29
-        dtg_dias.Size = New Size(404, 282)
-        dtg_dias.TabIndex = 3
-        ' 
-        ' dtg_horario
-        ' 
-        dtg_horario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        dtg_horario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Window
-        DataGridViewCellStyle3.Font = New Font("Eras Medium ITC", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        dtg_horario.DefaultCellStyle = DataGridViewCellStyle3
+        dtg_horario.DefaultCellStyle = DataGridViewCellStyle2
         dtg_horario.Dock = DockStyle.Fill
         dtg_horario.Location = New Point(3, 75)
         dtg_horario.Name = "dtg_horario"
@@ -118,11 +94,11 @@ Partial Class ScheduleControlHorario
         cmb_cursos.BackColor = Color.White
         cmb_cursos.Dock = DockStyle.Bottom
         cmb_cursos.FlatStyle = FlatStyle.Popup
-        cmb_cursos.Font = New Font("Eras Medium ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
+        cmb_cursos.Font = New Font("Eras Medium ITC", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         cmb_cursos.FormattingEnabled = True
-        cmb_cursos.Location = New Point(413, 29)
+        cmb_cursos.Location = New Point(413, 35)
         cmb_cursos.Name = "cmb_cursos"
-        cmb_cursos.Size = New Size(404, 39)
+        cmb_cursos.Size = New Size(404, 34)
         cmb_cursos.TabIndex = 2
         ' 
         ' ScheduleControlHorario
@@ -135,7 +111,6 @@ Partial Class ScheduleControlHorario
         Size = New Size(820, 360)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
-        CType(dtg_dias, ComponentModel.ISupportInitialize).EndInit()
         CType(dtg_horario, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
@@ -143,6 +118,5 @@ Partial Class ScheduleControlHorario
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents dtg_horario As DataGridView
     Friend WithEvents lbl_informacion As Label
-    Friend WithEvents dtg_dias As DataGridView
     Friend WithEvents cmb_cursos As ComboBox
 End Class

@@ -13,4 +13,10 @@
 
     End Function
 
+    Public Function CrearCurso() As ICurso Implements IControlador.CrearCurso
+
+        Return New CursoDAO()
+
+    End Function
+
 End Class

@@ -4,4 +4,6 @@
 
     Function CrearHorario() As IHorario
 
+    Function CrearCurso() As ICurso
+
 End Interface

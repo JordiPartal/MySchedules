@@ -22,8 +22,6 @@ Public Class UsuarioDAO
 
             Cerrar()
 
-            ColeccionDeDatos.Tables.Remove(0)
-
         Catch ex As Exception
 
         End Try
@@ -47,8 +45,6 @@ Public Class UsuarioDAO
             existe = login_ok And password_ok
 
             Cerrar()
-
-            ColeccionDeDatos.Tables.Remove(0)
 
             Return existe
 
