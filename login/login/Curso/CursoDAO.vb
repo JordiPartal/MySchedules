@@ -15,14 +15,22 @@ Public Class CursoDAO
             Adaptador = New SqlDataAdapter($"MostrarProgresoCurso '{login}', '{curso}'", CONEXION)
             Adaptador.Fill(ColeccionDeDatos)
 
+            If ColeccionDeDatos.HasErrors Then
+                Throw New Exception
+            End If
+
             Cerrar()
 
             Return ColeccionDeDatos
 
         Catch ex As Exception
 
-            Throw New Exception
-            MessageBox.Show("Se produjo un error")
+            Adaptador = New SqlDataAdapter($"MostrarMisCursos '{login}'", CONEXION)
+            Adaptador.Fill(ColeccionDeDatos)
+
+            Cerrar()
+
+            Return ColeccionDeDatos
 
         End Try
 
