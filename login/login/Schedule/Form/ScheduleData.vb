@@ -6,6 +6,7 @@ Module ScheduleData
     Public Cursos As DataGridView
 
     Sub ConstructorComboBoxHorario(id As Integer, Combo As ComboBox)
+
         Dim procedimiento = $"MostrarMisCursos {id}"
 
         ColeccionDeDatos.Clear()
@@ -16,9 +17,11 @@ Module ScheduleData
         For Each item As DataRow In ColeccionDeDatos.Rows
             Combo.Items.Add(item("curso")).ToString()
         Next
+
     End Sub
 
     Sub MostrarCurso(id As Integer)
+
         Dim procedimiento = $"MostrarMisCursos {id}"
 
         ColeccionDeDatos.Clear()
@@ -28,5 +31,7 @@ Module ScheduleData
         Adapter.Fill(ColeccionDeDatos)
         Cursos.DataSource = ColeccionDeDatos
         Cerrar()
+
     End Sub
+
 End Module
