@@ -135,7 +135,6 @@ Partial Class ScheduleControlHorario
         lbl_titulo.Name = "lbl_titulo"
         lbl_titulo.Size = New Size(398, 84)
         lbl_titulo.TabIndex = 0
-        lbl_titulo.Text = "[curso]"
         lbl_titulo.TextAlign = ContentAlignment.TopCenter
         ' 
         ' Panel1
@@ -156,7 +155,6 @@ Partial Class ScheduleControlHorario
         lbl_progreso.Name = "lbl_progreso"
         lbl_progreso.Size = New Size(398, 60)
         lbl_progreso.TabIndex = 1
-        lbl_progreso.Text = "[progreso]"
         lbl_progreso.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lbl_autor
@@ -167,7 +165,6 @@ Partial Class ScheduleControlHorario
         lbl_autor.Name = "lbl_autor"
         lbl_autor.Size = New Size(398, 40)
         lbl_autor.TabIndex = 0
-        lbl_autor.Text = "[autor]"
         lbl_autor.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' ScheduleControlHorario

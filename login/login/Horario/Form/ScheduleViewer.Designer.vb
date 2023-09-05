@@ -29,9 +29,9 @@ Partial Class ScheduleViewer
         pic_cursos = New PictureBox()
         pic_calendario = New PictureBox()
         lbl_saludo = New Label()
-        TableLayoutPanel2 = New TableLayoutPanel()
         tbl_custom_control = New TableLayoutPanel()
         sch_curso = New ScheduleControlCurso()
+        TableLayoutPanel2 = New TableLayoutPanel()
         tbl_principal.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel3.SuspendLayout()
@@ -125,20 +125,6 @@ Partial Class ScheduleViewer
         lbl_saludo.Text = "Hola, JORDI!"
         lbl_saludo.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' TableLayoutPanel2
-        ' 
-        TableLayoutPanel2.ColumnCount = 3
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 164F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 32F))
-        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel2.Dock = DockStyle.Right
-        TableLayoutPanel2.Location = New Point(0, 0)
-        TableLayoutPanel2.Name = "TableLayoutPanel2"
-        TableLayoutPanel2.RowCount = 1
-        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel2.Size = New Size(200, 100)
-        TableLayoutPanel2.TabIndex = 0
-        ' 
         ' tbl_custom_control
         ' 
         tbl_custom_control.ColumnCount = 1
@@ -162,6 +148,20 @@ Partial Class ScheduleViewer
         sch_curso.Name = "sch_curso"
         sch_curso.Size = New Size(808, 348)
         sch_curso.TabIndex = 0
+        ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.ColumnCount = 3
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 164F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 32F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel2.Dock = DockStyle.Right
+        TableLayoutPanel2.Location = New Point(0, 0)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 1
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel2.Size = New Size(200, 100)
+        TableLayoutPanel2.TabIndex = 0
         ' 
         ' ScheduleViewer
         ' 
