@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports Microsoft
 
 Public Class HorarioDAO
     Implements IHorario
@@ -6,23 +7,39 @@ Public Class HorarioDAO
     Dim ColeccionDeDatos As New DataTable
     Dim Adaptador As SqlDataAdapter
 
-    Public Sub CrearComboBox(login As String, combo As ComboBox) Implements IHorario.CrearComboBox
-
-        Dim opcion = String.Empty
-        ColeccionDeDatos.Clear()
+    Public Sub CrearComboBox(combo As ComboBox) Implements IHorario.CrearComboBox
 
         Abrir()
-        Adaptador = New SqlDataAdapter($"MostrarMisCursos '{login}'", CONEXION)
+
+        Adaptador = New SqlDataAdapter("SELECT * FROM dia", CONEXION)
         Adaptador.Fill(ColeccionDeDatos)
 
-        combo.Items.Add(String.Empty)
+        Cerrar()
 
-        For Each item As DataRow In ColeccionDeDatos.Rows
-            If item("curso").ToString() <> opcion Then
-                combo.Items.Add(item("curso").ToString())
-            End If
-            opcion = item("curso").ToString()
+        combo.Text = "-- SELECCIONA UN DIA --"
+
+        For Each item In ColeccionDeDatos.Rows
+            combo.Items.Add(item("descripcion"))
         Next
+
+    End Sub
+
+    Public Sub Seleccionar(login As String, curso As String, dia As String, datos As DataGridView) Implements IHorario.Seleccionar
+
+        Dim procedimiento As String
+
+        procedimiento = If(curso = String.Empty,
+            $"OrganizacionCurso '{login.ToUpper()}', @dia = '{dia}'",
+            $"OrganizacionCurso '{login.ToUpper()}', @curso = '{curso}'"
+        )
+
+        Abrir()
+
+        Adaptador = New SqlDataAdapter(procedimiento, CONEXION)
+        Adaptador.Fill(ColeccionDeDatos)
+        datos.DataSource = ColeccionDeDatos
+
+        Cerrar()
 
     End Sub
 
