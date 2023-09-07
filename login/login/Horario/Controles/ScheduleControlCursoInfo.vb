@@ -36,6 +36,10 @@
 
     Private Sub lbl_progreso_Click(sender As Object, e As EventArgs) Handles lbl_progreso.Click
 
+        Dim nuevo_progreso = New UpdateProgress With {
+            .curso = lbl_curso.Text
+        }
+        nuevo_progreso.Show()
 
     End Sub
 

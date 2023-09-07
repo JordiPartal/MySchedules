@@ -41,4 +41,19 @@ Public Class CursoDAO
 
     End Function
 
+    Public Sub ActualizarProgreso(login As String, curso As String, textbox As TextBox) Implements ICurso.ActualizarProgreso
+
+        Dim mi_login = login.ToUpper()
+        Dim porcentaje = Convert.ToInt32(textbox.Text.Substring(0, textbox.Text.Length - 1))
+        Dim comando As SqlCommand
+
+        Abrir()
+
+        comando = New SqlCommand($"ActualizarProgresCurso '{mi_login}', '{curso}', {porcentaje}", CONEXION)
+        Dim registros As Integer = comando.ExecuteNonQuery()
+
+        comando.Dispose()
+
+    End Sub
+
 End Class

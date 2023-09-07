@@ -81,6 +81,7 @@ Partial Class ScheduleControlCursoInfo
         ' 
         ' lbl_progreso
         ' 
+        lbl_progreso.Cursor = Cursors.Hand
         lbl_progreso.Dock = DockStyle.Top
         lbl_progreso.Font = New Font("Eras Light ITC", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         lbl_progreso.Location = New Point(0, 0)

@@ -15,4 +15,11 @@
     ''' <returns></returns>
     Function Seleccionar(login As String, curso As String) As DataTable
 
+    ''' <summary>
+    ''' Actuliza el progreso de un curso
+    ''' </summary>
+    ''' <param name="login"></param>
+    ''' <param name="textbox"></param>
+    Sub ActualizarProgreso(login As String, curso As String, textbox As TextBox)
+
 End Interface
