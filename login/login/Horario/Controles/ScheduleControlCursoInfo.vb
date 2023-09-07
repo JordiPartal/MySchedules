@@ -23,6 +23,7 @@
     End Property
 
     Private _autor As String
+
     Public Property autor As String
         Get
             Return _autor
@@ -32,5 +33,10 @@
             lbl_autores.Text = _autor
         End Set
     End Property
+
+    Private Sub lbl_progreso_Click(sender As Object, e As EventArgs) Handles lbl_progreso.Click
+
+
+    End Sub
 
 End Class
