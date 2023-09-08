@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ScheduleControlHorario
+Partial Class CCHorario
     Inherits System.Windows.Forms.UserControl
 
     'UserControl reemplaza a Dispose para limpiar la lista de componentes.
@@ -28,7 +28,7 @@ Partial Class ScheduleControlHorario
         cmb_dias = New ComboBox()
         dtg_horario = New DataGridView()
         cmb_cursos = New ComboBox()
-        ScheduleControlCursoInfo = New ScheduleControlCursoInfo()
+        ScheduleControlCursoInfo = New CCCursoInfo()
         tlp_overview.SuspendLayout()
         CType(dtg_horario, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -57,7 +57,7 @@ Partial Class ScheduleControlHorario
         ' 
         cmb_dias.BackColor = Color.White
         cmb_dias.Dock = DockStyle.Bottom
-        cmb_dias.FlatStyle = FlatStyle.Popup
+        cmb_dias.FlatStyle = FlatStyle.Flat
         cmb_dias.Font = New Font("Eras Medium ITC", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         cmb_dias.FormattingEnabled = True
         cmb_dias.Location = New Point(3, 35)
@@ -101,7 +101,7 @@ Partial Class ScheduleControlHorario
         ' 
         cmb_cursos.BackColor = Color.White
         cmb_cursos.Dock = DockStyle.Bottom
-        cmb_cursos.FlatStyle = FlatStyle.Popup
+        cmb_cursos.FlatStyle = FlatStyle.Flat
         cmb_cursos.Font = New Font("Eras Medium ITC", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         cmb_cursos.FormattingEnabled = True
         cmb_cursos.Location = New Point(413, 35)
@@ -119,13 +119,13 @@ Partial Class ScheduleControlHorario
         ScheduleControlCursoInfo.Size = New Size(404, 282)
         ScheduleControlCursoInfo.TabIndex = 5
         ' 
-        ' ScheduleControlHorario
+        ' CCHorario
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         Controls.Add(tlp_overview)
-        Name = "ScheduleControlHorario"
+        Name = "CCHorario"
         Size = New Size(820, 360)
         tlp_overview.ResumeLayout(False)
         CType(dtg_horario, ComponentModel.ISupportInitialize).EndInit()
@@ -136,5 +136,5 @@ Partial Class ScheduleControlHorario
     Friend WithEvents dtg_horario As DataGridView
     Friend WithEvents cmb_cursos As ComboBox
     Friend WithEvents cmb_dias As ComboBox
-    Friend WithEvents ScheduleControlCursoInfo As ScheduleControlCursoInfo
+    Friend WithEvents ScheduleControlCursoInfo As CCCursoInfo
 End Class

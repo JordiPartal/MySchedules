@@ -29,13 +29,13 @@ Partial Class UpdateProgress
         ' 
         ' btn_actualizar
         ' 
-        btn_actualizar.BackColor = Color.LimeGreen
+        btn_actualizar.BackColor = Color.DeepSkyBlue
         btn_actualizar.FlatStyle = FlatStyle.Flat
         btn_actualizar.Font = New Font("Eras Demi ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
         btn_actualizar.ForeColor = Color.Transparent
         btn_actualizar.Location = New Point(13, 129)
         btn_actualizar.Name = "btn_actualizar"
-        btn_actualizar.Size = New Size(455, 50)
+        btn_actualizar.Size = New Size(455, 49)
         btn_actualizar.TabIndex = 0
         btn_actualizar.Text = "Aceptar"
         btn_actualizar.UseVisualStyleBackColor = False

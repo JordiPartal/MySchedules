@@ -22,4 +22,20 @@
     ''' <param name="textbox"></param>
     Sub ActualizarProgreso(login As String, curso As String, textbox As TextBox)
 
+    ''' <summary>
+    ''' Elimina una registro de la tabla (dia_curso_usuario)
+    ''' </summary>
+    ''' <param name="login"></param>
+    ''' <param name="dia"></param>
+    ''' <param name="curso"></param>
+    Sub EliminarCursoDePlanificacion(login As String, dia As String, curso As String)
+
+    ''' <summary>
+    ''' Añade un registo a la tabla (dia_curso_usuario)
+    ''' </summary>
+    ''' <param name="login"></param>
+    ''' <param name="dia"></param>
+    ''' <param name="curso"></param>
+    Sub AnadirCursoEnPlanificacion(login As String, dia As String, curso As String)
+
 End Interface

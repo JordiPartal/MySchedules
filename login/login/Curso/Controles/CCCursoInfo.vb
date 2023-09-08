@@ -1,4 +1,4 @@
-﻿Public Class ScheduleControlCursoInfo
+﻿Public Class CCCursoInfo
 
     Private _curso As String
     Public Property curso As String

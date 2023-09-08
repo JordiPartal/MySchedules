@@ -1,4 +1,4 @@
-﻿Public Class ScheduleControlCurso
+﻿Public Class CCCurso
 
     Dim controlador As IControlador
     Dim acceso = New Acceso()
@@ -19,5 +19,12 @@
             End If
         End Set
     End Property
+
+    Private Sub pic_week_Click(sender As Object, e As EventArgs) Handles pic_week.Click
+
+        ScheduleViewer.Hide()
+        Planificador.Show()
+
+    End Sub
 
 End Class

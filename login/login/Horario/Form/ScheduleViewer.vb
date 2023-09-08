@@ -1,5 +1,5 @@
 ﻿Public Class ScheduleViewer
-    Dim sch_horario As ScheduleControlHorario
+    Dim sch_horario As CCHorario
 
     Private Sub ScheduleViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         sch_curso.cabecera = "Qué quieres hacer?"
@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub pic_calendario_Click(sender As Object, e As EventArgs) Handles pic_calendario.Click
-        sch_horario = New ScheduleControlHorario()
+        sch_horario = New CCHorario()
 
         tbl_custom_control.Controls.Clear()
         tbl_custom_control.Controls.Add(sch_horario)

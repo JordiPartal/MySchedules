@@ -56,4 +56,32 @@ Public Class CursoDAO
 
     End Sub
 
+    Public Sub EliminarCursoDePlanificacion(login As String, dia As String, curso As String) Implements ICurso.EliminarCursoDePlanificacion
+
+        Dim mi_login = login.ToUpper()
+        Dim comando As SqlCommand
+
+        Abrir()
+
+        comando = New SqlCommand($"EliminarCursoPlanificacion '{login}', '{dia}', '{curso}'", CONEXION)
+        Dim registro As Integer = comando.ExecuteNonQuery()
+
+        comando.Dispose()
+
+    End Sub
+
+    Public Sub AnadirCursoEnPlanificacion(login As String, dia As String, curso As String) Implements ICurso.AnadirCursoEnPlanificacion
+
+        Dim mi_login = login.ToUpper()
+        Dim comando As SqlCommand
+
+        Abrir()
+
+        comando = New SqlCommand($"InsertarCursoPlanificacion '{login}', '{dia}', '{curso}'", CONEXION)
+        Dim registro As Integer = comando.ExecuteNonQuery()
+
+        comando.Dispose()
+
+    End Sub
+
 End Class

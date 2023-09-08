@@ -1,6 +1,6 @@
 ﻿Imports Azure.Core.HttpHeader
 
-Public Class ScheduleControlHorario
+Public Class CCHorario
 
     Dim datos As DataTable
     Dim etiqueta As Label

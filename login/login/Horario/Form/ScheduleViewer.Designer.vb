@@ -30,7 +30,7 @@ Partial Class ScheduleViewer
         pic_calendario = New PictureBox()
         lbl_saludo = New Label()
         tbl_custom_control = New TableLayoutPanel()
-        sch_curso = New ScheduleControlCurso()
+        sch_curso = New CCCurso()
         TableLayoutPanel2 = New TableLayoutPanel()
         tbl_principal.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
@@ -187,10 +187,10 @@ Partial Class ScheduleViewer
     Friend WithEvents tbl_principal As TableLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents lbl_saludo As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents pic_cursos As PictureBox
     Friend WithEvents pic_calendario As PictureBox
     Friend WithEvents tbl_custom_control As TableLayoutPanel
-    Friend WithEvents sch_curso As ScheduleControlCurso
+    Friend WithEvents sch_curso As CCCurso
+    Friend WithEvents lbl_saludo As Label
 End Class
