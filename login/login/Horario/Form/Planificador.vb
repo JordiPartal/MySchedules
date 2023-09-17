@@ -1,6 +1,7 @@
 ﻿Public Class Planificador
 
     Dim acceso = New Acceso()
+    Dim curso = String.Empty
 
     Dim datos As DataTable
     Dim controlador As IControlador
@@ -29,7 +30,6 @@
 
     Private Sub cmb_dias_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_dias.SelectedIndexChanged
 
-        Dim curso = String.Empty
         controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
 
         If dtg_horario.Rows.Count > 0 Then
@@ -52,12 +52,14 @@
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
 
         controlador.CrearCurso().EliminarCursoDePlanificacion("JORDI", cmb_dias.Text, cmb_curso.Text)
+        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
 
     End Sub
 
     Private Sub btn_planificar_Click(sender As Object, e As EventArgs) Handles btn_planificar.Click
 
         controlador.CrearCurso().AnadirCursoEnPlanificacion("JORDI", cmb_dias.Text, cmb_curso.Text)
+        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
 
     End Sub
 End Class
