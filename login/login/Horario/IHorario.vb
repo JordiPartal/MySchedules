@@ -22,4 +22,10 @@
     ''' <param name="datos"></param>
     Sub Seleccionar(login As String, datos As DataGridView)
 
+    ''' <summary>
+    ''' Reinicia toda la demana
+    ''' </summary>
+    ''' <param name="login"></param>
+    Sub ReiniciarSemana(login As String)
+
 End Interface

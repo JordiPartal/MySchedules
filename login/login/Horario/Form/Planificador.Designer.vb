@@ -35,10 +35,12 @@ Partial Class Planificador
         cmb_dias = New ComboBox()
         cmb_curso = New ComboBox()
         btn_eliminar = New Button()
+        pic_new_week = New PictureBox()
         TableLayoutPanel1.SuspendLayout()
         CType(pic_home, ComponentModel.ISupportInitialize).BeginInit()
         CType(dtg_horario, ComponentModel.ISupportInitialize).BeginInit()
         tlp_options.SuspendLayout()
+        CType(pic_new_week, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TableLayoutPanel1
@@ -51,6 +53,7 @@ Partial Class Planificador
         TableLayoutPanel1.Controls.Add(pic_home, 2, 0)
         TableLayoutPanel1.Controls.Add(dtg_horario, 1, 1)
         TableLayoutPanel1.Controls.Add(tlp_options, 0, 1)
+        TableLayoutPanel1.Controls.Add(pic_new_week, 1, 0)
         TableLayoutPanel1.Dock = DockStyle.Fill
         TableLayoutPanel1.Location = New Point(0, 0)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -197,6 +200,17 @@ Partial Class Planificador
         btn_eliminar.Text = "Eliminar"
         btn_eliminar.UseVisualStyleBackColor = False
         ' 
+        ' pic_new_week
+        ' 
+        pic_new_week.Dock = DockStyle.Fill
+        pic_new_week.Image = CType(resources.GetObject("pic_new_week.Image"), Image)
+        pic_new_week.Location = New Point(413, 3)
+        pic_new_week.Name = "pic_new_week"
+        pic_new_week.Size = New Size(199, 114)
+        pic_new_week.SizeMode = PictureBoxSizeMode.Zoom
+        pic_new_week.TabIndex = 11
+        pic_new_week.TabStop = False
+        ' 
         ' Planificador
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -213,6 +227,7 @@ Partial Class Planificador
         CType(pic_home, ComponentModel.ISupportInitialize).EndInit()
         CType(dtg_horario, ComponentModel.ISupportInitialize).EndInit()
         tlp_options.ResumeLayout(False)
+        CType(pic_new_week, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -225,4 +240,5 @@ Partial Class Planificador
     Friend WithEvents cmb_dias As ComboBox
     Friend WithEvents cmb_curso As ComboBox
     Friend WithEvents btn_eliminar As Button
+    Friend WithEvents pic_new_week As PictureBox
 End Class

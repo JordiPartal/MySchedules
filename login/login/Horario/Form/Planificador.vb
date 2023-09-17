@@ -3,10 +3,15 @@
     Dim acceso = New Acceso()
     Dim curso = String.Empty
 
+    Dim fecha As New Date
     Dim datos As DataTable
     Dim controlador As IControlador
 
+
     Private Sub Planificador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        fecha = Today
+        Dim is_monday = fecha.DayOfWeek = 1
 
         controlador = acceso.Crear(Enumeracion.Fabrica)
 
@@ -18,6 +23,12 @@
 
         btn_eliminar.Visible = False
         tlp_options.SetRow(btn_planificar, 4)
+
+        If is_monday Then
+            pic_new_week.Show()
+        Else
+            pic_new_week.Hide()
+        End If
 
     End Sub
 
@@ -62,4 +73,12 @@
         controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
 
     End Sub
+
+    Private Sub pic_new_week_Click(sender As Object, e As EventArgs) Handles pic_new_week.Click
+
+        controlador.CrearHorario().ReiniciarSemana("JORDI")
+        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
+
+    End Sub
+
 End Class
