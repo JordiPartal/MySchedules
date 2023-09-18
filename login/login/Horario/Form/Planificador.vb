@@ -19,7 +19,7 @@
         cmb_curso.Text = "-- SELECCIONA UN CURSO --"
 
         controlador.CrearHorario().CrearComboBox(cmb_dias)
-        controlador.CrearCurso().CrearComboBox("JORDI", cmb_curso)
+        controlador.CrearCurso().CrearComboBox(Globales.LOGIN, cmb_curso)
 
         btn_eliminar.Visible = False
         tlp_options.SetRow(btn_planificar, 4)
@@ -41,7 +41,7 @@
 
     Private Sub cmb_dias_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_dias.SelectedIndexChanged
 
-        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
+        controlador.CrearHorario().Seleccionar(Globales.LOGIN, curso, cmb_dias.Text, dtg_horario)
 
         If dtg_horario.Rows.Count > 0 Then
             btn_eliminar.Visible = True
@@ -62,22 +62,22 @@
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
 
-        controlador.CrearCurso().EliminarCursoDePlanificacion("JORDI", cmb_dias.Text, cmb_curso.Text)
-        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
+        controlador.CrearCurso().EliminarCursoDePlanificacion(Globales.LOGIN, cmb_dias.Text, cmb_curso.Text)
+        controlador.CrearHorario().Seleccionar(Globales.LOGIN, curso, cmb_dias.Text, dtg_horario)
 
     End Sub
 
     Private Sub btn_planificar_Click(sender As Object, e As EventArgs) Handles btn_planificar.Click
 
-        controlador.CrearCurso().AnadirCursoEnPlanificacion("JORDI", cmb_dias.Text, cmb_curso.Text)
-        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
+        controlador.CrearCurso().AnadirCursoEnPlanificacion(Globales.LOGIN, cmb_dias.Text, cmb_curso.Text)
+        controlador.CrearHorario().Seleccionar(Globales.LOGIN, curso, cmb_dias.Text, dtg_horario)
 
     End Sub
 
     Private Sub pic_new_week_Click(sender As Object, e As EventArgs) Handles pic_new_week.Click
 
-        controlador.CrearHorario().ReiniciarSemana("JORDI")
-        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
+        controlador.CrearHorario().ReiniciarSemana(Globales.LOGIN)
+        controlador.CrearHorario().Seleccionar(Globales.LOGIN, curso, cmb_dias.Text, dtg_horario)
 
     End Sub
 

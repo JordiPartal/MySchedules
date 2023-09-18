@@ -17,7 +17,7 @@
     Private Sub UpdateProgress_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         controlador = acceso.Crear(Enumeracion.Fabrica)
-        datos = controlador.CrearCurso().Seleccionar("JORDI", curso)
+        datos = controlador.CrearCurso().Seleccionar(Globales.LOGIN, curso)
         txt_tu_progreso.Text = datos(0)("Progreso")
 
     End Sub
@@ -25,7 +25,7 @@
     Private Sub btn_actualizar_Click(sender As Object, e As EventArgs) Handles btn_actualizar.Click
 
         controlador = acceso.Crear(Enumeracion.Fabrica)
-        controlador.CrearCurso().ActualizarProgreso("JORDI", curso, txt_tu_progreso)
+        controlador.CrearCurso().ActualizarProgreso(Globales.LOGIN, curso, txt_tu_progreso)
         MyBase.Close()
 
     End Sub

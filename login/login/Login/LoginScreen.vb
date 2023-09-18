@@ -18,13 +18,16 @@
     Private Sub Button_Login_On_Click(sender As Object, e As EventArgs) Handles btn_login.Click
 
         Dim exist As Boolean
+        Globales.LOGIN = txt_usuario.Text.ToUpper()
 
         Try
-            exist = ComprobarUsuarioSQL(txt_usuario.Text, txt_contrasena.Text)
-            InformarSiExisteSQL(exist, btn_login)
+            exist = ComprobarUsuarioSQL(Globales.LOGIN, txt_contrasena.Text)
+            InformarSiExisteSQL(exist, btn_login, Me, ScheduleViewer)
         Catch ex As Exception
-
+            btn_login.BackColor = Color.Red
+            btn_login.Text = "Usuario NO autorizado"
         End Try
 
     End Sub
+
 End Class

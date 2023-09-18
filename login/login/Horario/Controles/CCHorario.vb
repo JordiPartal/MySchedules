@@ -11,7 +11,7 @@ Public Class CCHorario
     Private Sub ScheduleControlHorario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         controlador = acceso.Crear(Enumeracion.Fabrica)
-        controlador.CrearCurso().CrearComboBox("JORDI", cmb_cursos)
+        controlador.CrearCurso().CrearComboBox(Globales.LOGIN, cmb_cursos)
         controlador.CrearHorario().CrearComboBox(cmb_dias)
 
     End Sub
@@ -21,7 +21,7 @@ Public Class CCHorario
         Dim curso = String.Empty
 
         cmb_cursos.Text = "-- SELECCIONA UN CURSO --"
-        controlador.CrearHorario().Seleccionar("JORDI", curso, cmb_dias.Text, dtg_horario)
+        controlador.CrearHorario().Seleccionar(Globales.LOGIN, curso, cmb_dias.Text, dtg_horario)
 
     End Sub
 
@@ -54,7 +54,7 @@ Public Class CCHorario
         ScheduleControlCursoInfo.curso = etiqueta.Text
 
         cmb_cursos.Text = "-- SELECCIONA UN CURSO --"
-        datos = controlador.CrearCurso().Seleccionar("JORDI", etiqueta.Text)
+        datos = controlador.CrearCurso().Seleccionar(Globales.LOGIN, etiqueta.Text)
         ScheduleControlCursoInfo.progreso = $"Tu progreso es de {datos(0)("Progreso")}"
 
         If datos.Rows.Count > 1 Then
@@ -83,7 +83,7 @@ Public Class CCHorario
         ScheduleControlCursoInfo.curso = etiqueta.Text
 
         cmb_dias.Text = "-- SELECCIONA UN DIA --"
-        datos = controlador.CrearCurso().Seleccionar("JORDI", etiqueta.Text)
+        datos = controlador.CrearCurso().Seleccionar(Globales.LOGIN, etiqueta.Text)
         ScheduleControlCursoInfo.progreso = $"Tu progreso es de {datos(0)("Progreso")}"
 
         controlador.CrearHorario().Seleccionar("JORDI", curso, String.Empty, dtg_horario)

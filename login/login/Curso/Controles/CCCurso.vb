@@ -15,7 +15,7 @@
 
             If _cabecera = "Cursos" Then
                 controlador = acceso.Crear(Enumeracion.Fabrica)
-                controlador.CrearHorario().Seleccionar("JORDI", dtg_usuario)
+                controlador.CrearHorario().Seleccionar(Globales.LOGIN, dtg_usuario)
             End If
         End Set
     End Property
