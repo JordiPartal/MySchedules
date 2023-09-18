@@ -156,7 +156,7 @@ Partial Class LoginScreen
         ClientSize = New Size(720, 360)
         Controls.Add(tlp_principal)
         Font = New Font("Eras Light ITC", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(5)
         Name = "LoginScreen"
         StartPosition = FormStartPosition.CenterScreen
