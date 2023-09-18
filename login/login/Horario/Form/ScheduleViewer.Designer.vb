@@ -170,7 +170,7 @@ Partial Class ScheduleViewer
         BackColor = Color.White
         ClientSize = New Size(820, 480)
         Controls.Add(tbl_principal)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "ScheduleViewer"
         StartPosition = FormStartPosition.CenterScreen
         Text = "ScheduleViewer"
