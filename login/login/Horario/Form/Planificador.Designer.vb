@@ -202,6 +202,7 @@ Partial Class Planificador
         ' 
         ' pic_new_week
         ' 
+        pic_new_week.Cursor = Cursors.Hand
         pic_new_week.Dock = DockStyle.Fill
         pic_new_week.Image = CType(resources.GetObject("pic_new_week.Image"), Image)
         pic_new_week.Location = New Point(413, 3)

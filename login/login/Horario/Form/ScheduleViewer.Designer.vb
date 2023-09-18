@@ -91,7 +91,7 @@ Partial Class ScheduleViewer
         ' 
         ' pic_cursos
         ' 
-        pic_cursos.Cursor = Cursors.PanNW
+        pic_cursos.Cursor = Cursors.Hand
         pic_cursos.Dock = DockStyle.Fill
         pic_cursos.Image = CType(resources.GetObject("pic_cursos.Image"), Image)
         pic_cursos.Location = New Point(3, 3)
@@ -103,7 +103,7 @@ Partial Class ScheduleViewer
         ' 
         ' pic_calendario
         ' 
-        pic_calendario.Cursor = Cursors.PanNW
+        pic_calendario.Cursor = Cursors.Hand
         pic_calendario.Dock = DockStyle.Fill
         pic_calendario.Image = CType(resources.GetObject("pic_calendario.Image"), Image)
         pic_calendario.Location = New Point(199, 3)
