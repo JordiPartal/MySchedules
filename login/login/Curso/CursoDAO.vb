@@ -70,17 +70,25 @@ Public Class CursoDAO
 
     End Sub
 
-    Public Sub AnadirCursoEnPlanificacion(login As String, dia As String, curso As String) Implements ICurso.AnadirCursoEnPlanificacion
+    Public Sub AnadirCursoEnPlanificacion(login As String, dia As String, curso As String, datagrid As DataGridView) Implements ICurso.AnadirCursoEnPlanificacion
 
-        Dim mi_login = login.ToUpper()
-        Dim comando As SqlCommand
+        Dim comando As SqlCommandBuilder
+        Dim id As Integer
+        Dim datos As DataTable = datagrid.DataSource
 
         Abrir()
 
-        comando = New SqlCommand($"InsertarCursoPlanificacion '{login}', '{dia}', '{curso}'", CONEXION)
-        Dim registro As Integer = comando.ExecuteNonQuery()
+        Adaptador = New SqlDataAdapter($"MostrarUsuario '{login.ToUpper()}'", CONEXION)
+        Adaptador.Fill(ColeccionDeDatos)
+        id = ColeccionDeDatos.DataSet.Tables(0).Rows(0)("id")
 
-        comando.Dispose()
+        Adaptador = New SqlDataAdapter($"SELECT * FROM PlanificarHorario ({id}, {dia})", CONEXION)
+        Adaptador.Fill(ColeccionDeDatos)
+        comando = New SqlCommandBuilder
+
+        Adaptador.Update(datos)
+
+        Cerrar()
 
     End Sub
 

@@ -10,6 +10,10 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineDebug>False</DefineDebug>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Contexto\**" />
     <Compile Remove="Modelos\**" />

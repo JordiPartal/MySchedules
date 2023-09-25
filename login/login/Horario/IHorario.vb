@@ -1,10 +1,30 @@
 ﻿Public Interface IHorario
 
     ''' <summary>
-    ''' Crear la ComboBox de los días
+    ''' Muestra el día de la semana
+    ''' </summary>
+    ''' <param name="dia"></param>
+    ''' <param name="text_box"></param>
+    Sub MostrarDia(dia As Integer, text_box As Label)
+
+    ''' <summary>
+    ''' Mostrar el horario del día
+    ''' </summary>
+    ''' <param name="login"></param>
+    ''' <param name="dia"></param>
+    Sub MostrarHorario(login As String, dia As Integer, data_grid As DataGridView)
+
+    ''' <summary>
+    ''' Crear la ComboBox de las horas de la jornada
     ''' </summary>
     ''' <param name="combo"></param>
-    Sub CrearComboBox(combo As ComboBox)
+    Sub CrearComboBoxHora(combo As ComboBox)
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="combo"></param>
+    Sub CrearComboBoxDia(combo As ComboBox)
 
     ''' <summary>
     ''' Muestrar los cursos planificados por día o los días en los que hay planificado un curso
@@ -21,6 +41,15 @@
     ''' <param name="login"></param>
     ''' <param name="datos"></param>
     Sub Seleccionar(login As String, datos As DataGridView)
+
+    ''' <summary>
+    ''' Permite al usuario planificar la semana
+    ''' </summary>
+    ''' <param name="login"></param>
+    ''' <param name="dia"></param>
+    ''' <param name="hora"></param>
+    ''' <param name="curso"></param>
+    Sub PlanificarDia(login As String, dia As Integer, hora As String, curso As String, datagrid As DataGridView)
 
     ''' <summary>
     ''' Reinicia toda la demana

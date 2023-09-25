@@ -12,7 +12,7 @@ Public Class CCHorario
 
         controlador = acceso.Crear(Enumeracion.Fabrica)
         controlador.CrearCurso().CrearComboBox(Globales.LOGIN, cmb_cursos)
-        controlador.CrearHorario().CrearComboBox(cmb_dias)
+        controlador.CrearHorario().CrearComboBoxDia(cmb_dias)
 
     End Sub
 
@@ -86,7 +86,7 @@ Public Class CCHorario
         datos = controlador.CrearCurso().Seleccionar(Globales.LOGIN, etiqueta.Text)
         ScheduleControlCursoInfo.progreso = $"Tu progreso es de {datos(0)("Progreso")}"
 
-        controlador.CrearHorario().Seleccionar("JORDI", curso, String.Empty, dtg_horario)
+        controlador.CrearHorario().Seleccionar(Globales.LOGIN, curso, String.Empty, dtg_horario)
 
         If datos.Rows.Count > 1 Then
             For Each item In datos.Rows

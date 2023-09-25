@@ -31,11 +31,11 @@
     Sub EliminarCursoDePlanificacion(login As String, dia As String, curso As String)
 
     ''' <summary>
-    ''' Añade un registo a la tabla (dia_curso_usuario)
+    ''' Añade un registo a la tabla (usuario_dia_hora_curso)
     ''' </summary>
     ''' <param name="login"></param>
     ''' <param name="dia"></param>
     ''' <param name="curso"></param>
-    Sub AnadirCursoEnPlanificacion(login As String, dia As String, curso As String)
+    Sub AnadirCursoEnPlanificacion(login As String, dia As String, curso As String, datagrid As DataGridView)
 
 End Interface
