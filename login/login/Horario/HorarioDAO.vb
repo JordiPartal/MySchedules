@@ -83,18 +83,27 @@ Public Class HorarioDAO
 
         Dim procedimiento As String
 
-        procedimiento = If(curso = String.Empty,
+        procedimiento = IIf(curso = String.Empty,
             $"OrganizacionCurso '{login.ToUpper()}', @dia = '{dia}'",
             $"OrganizacionCurso '{login.ToUpper()}', @curso = '{curso}'"
         )
 
-        Abrir()
+        Try
 
-        Adaptador = New SqlDataAdapter(procedimiento, CONEXION)
-        Adaptador.Fill(ColeccionDeDatos)
-        datos.DataSource = ColeccionDeDatos
+            Abrir()
 
-        Cerrar()
+            Adaptador = New SqlDataAdapter(procedimiento, CONEXION)
+            Adaptador.Fill(ColeccionDeDatos)
+            datos.DataSource = ColeccionDeDatos
+            datos.Columns("hora").Visible = False
+
+            Cerrar()
+
+        Catch ex As Exception
+
+            MessageBox.Show("No hay ningún curso registrado para la fecha")
+
+        End Try
 
     End Sub
 
