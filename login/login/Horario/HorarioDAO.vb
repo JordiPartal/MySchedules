@@ -13,6 +13,8 @@ Public Class HorarioDAO
         Dim dia_de_la_semana
         Dim datos As New DataSet
 
+        IIf(dia = 0, dia = 7, dia = dia)
+
         Abrir()
 
         Adaptador = New SqlDataAdapter($"MostrarDia {dia}", CONEXION)
