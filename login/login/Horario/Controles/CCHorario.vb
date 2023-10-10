@@ -34,7 +34,7 @@ Public Class CCHorario
     Private Sub dtg_horario_SelectionChanged(sender As Object, e As EventArgs) Handles dtg_horario.SelectionChanged
 
         Dim cursos = cmb_dias.Text <> "-- SELECCIONA UN DIA --"
-        Dim seleccionado = dtg_horario.CurrentRow.Selected <> False
+        Dim seleccionado = dtg_horario.SelectedRows.Count > 0
 
         If cursos And seleccionado Then
             ImportarDatosCurso(dtg_horario.CurrentCell.Value)
